@@ -237,7 +237,9 @@
         android:id="@+id/gp1_water1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="tv_word,tv_date"/>
+        app:constraint_referenced_ids="tv_word,tv_date"
+        android:visibility="invisible"
+        />
     <TextView
         android:id="@+id/tv_word"
         android:layout_width="wrap_content"
@@ -260,6 +262,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="10dp"
         android:textSize="15sp"
+        android:text="yy-mm-dd 星期 地址"
         android:textColor="@color/white"
 
         />
