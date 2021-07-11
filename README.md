@@ -16,4 +16,4 @@
 开发平台：Android Studio
 开发语言：Kotlin
 ## 3.效果
-![image](doc_picture/竖屏水印）
+![image](doc_picture/竖屏水印.png）
