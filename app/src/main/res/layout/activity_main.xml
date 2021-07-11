@@ -1,0 +1,435 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bt_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black">
+        <ImageView
+            android:id="@+id/iv_flash"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+           
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+        <ImageView
+            android:id="@+id/iv_gps"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/gps"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp" />
+        <ImageView
+            android:id="@+id/iv_water"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/water"
+
+            app:layout_constraintRight_toLeftOf="@+id/iv_gps"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <SurfaceView
+        android:id="@+id/sf_camera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/bt_top"
+        app:layout_constraintBottom_toTopOf="@id/bt_layout"
+        />
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gp4_water1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_work_title,tv_work_area,tv_work_address,tv_work_people,tv_work_watch_people,tv_work_contain"
+        android:visibility="invisible"
+        />
+    <TextView
+        android:id="@+id/tv_work_title"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tv_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:background="@drawable/abc_list_longpressed_holo"
+        android:text="工程记录\nyyyy-mm-dd 00:00"
+        android:layout_marginStart="30dp" />
+    <EditText
+        android:id="@+id/tv_work_area"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:background="@color/grey"
+        android:text="施工区域：点击编辑"
+        android:layout_marginStart="30dp" />
+    <EditText
+        android:id="@+id/tv_work_contain"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_area"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:background="@color/grey"
+        android:text="施工内容：点击编辑"
+        android:layout_marginStart="30dp" />
+    <EditText
+        android:id="@+id/tv_work_people"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_contain"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:background="@color/grey"
+        android:text="施工责任人：点击编辑"
+        android:layout_marginStart="30dp" />
+    <EditText
+        android:id="@+id/tv_work_watch_people"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_people"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:background="@color/grey"
+        android:text="监理责任人：点击编辑"
+        android:layout_marginStart="30dp" />
+    <TextView
+        android:id="@+id/tv_work_address"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_watch_people"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:background="@color/grey"
+        android:text="地址:"
+        android:layout_marginStart="30dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gp3_water1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_title,tv_work,tv_workTime,tv_contain,tv_company"
+        android:visibility="invisible"
+        />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="100dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:background="@drawable/abc_list_longpressed_holo"
+        android:text="物业保洁记录"
+        android:layout_marginStart="30dp" />
+    <TextView
+        android:id="@+id/tv_workTime"
+        android:layout_width="50dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_date"
+        app:layout_constraintLeft_toRightOf="@id/tv_title"
+
+        android:layout_marginBottom="100dp"
+
+        android:textSize="10sp"
+
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_bg"
+        android:text="00:00\nyy-mm-dd"
+        />
+    <EditText
+        android:id="@+id/tv_work"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:background="@color/grey"
+        android:text="工作内容：点击编辑"
+        android:layout_marginStart="30dp" />
+    <TextView
+        android:id="@+id/tv_contain"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_work"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:background="@color/grey"
+        android:text="地址:"
+        android:layout_marginStart="30dp" />
+    <EditText
+        android:id="@+id/tv_company"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_contain"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:background="@drawable/abc_list_longpressed_holo"
+        android:text="公司:点击编辑"
+        android:layout_marginStart="30dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gp1_water1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_word,tv_date"/>
+    <TextView
+        android:id="@+id/tv_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tv_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="10dp"
+
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:text="00:00"
+        />
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bt_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+
+        />
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gp1_water2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_word2,tv_date2"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/tv_word2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="90"
+        app:layout_constraintTop_toBottomOf="@id/bt_top"
+        app:layout_constraintBottom_toTopOf="@id/bt_layout"
+        app:layout_constraintLeft_toLeftOf="@id/sf_camera"
+        android:layout_marginLeft="70dp"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        android:text="00:00"
+        android:layout_marginStart="70sp" />
+
+        <TextView
+            android:id="@+id/tv_date2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="90"
+            app:layout_constraintTop_toBottomOf="@+id/bt_top"
+            app:layout_constraintBottom_toTopOf="@+id/bt_layout"
+            app:layout_constraintLeft_toLeftOf="@id/tv_word2"
+            app:layout_constraintRight_toLeftOf="@id/tv_word2"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:text="yy-mm-dd 星期 地址"
+            tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gp2_water1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="tv_time"
+        />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tv_longitude,tv_latitude,tv_location"
+        />
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/bt_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="时间：yyyy.mm.dd HH:mm "
+        android:layout_marginStart="5dp" />
+    <TextView
+        android:id="@+id/tv_water2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/bt_top"
+        app:layout_constraintRight_toRightOf="@id/sf_camera"
+        app:layout_constraintLeft_toLeftOf="@+id/sf_camera"
+        android:layout_marginTop="90dp"
+        android:visibility="invisible"
+        android:layout_marginLeft="300dp"
+        android:textSize="15sp"
+        android:rotation="90"
+        android:textColor="@color/white"
+        android:text="时间：yyyy.mm.dd HH:mm "
+        />
+    <TextView
+        android:id="@+id/tv_longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="经度："
+         />
+    <TextView
+        android:id="@+id/tv_latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_longitude"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="纬度："
+        />
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_latitude"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="地址："
+        />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black"
+        >
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_takephoto"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/picture"
+            />
+        <ImageButton
+            android:id="@+id/tv_takephoto"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ic_shutter"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageButton
+            android:id="@+id/tv_change_camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tv_takephoto"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@android:color/transparent"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_switch"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
