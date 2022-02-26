@@ -8,9 +8,27 @@
 开发平台：Android Studio
 开发语言：Kotlin
 ## 3.效果
-![image](doc_picture/竖屏水印.png)
-![image](doc_picture/横屏水印.png)
-![image](doc_picture/水印样式选择.png)
-![image](doc_picture/物业.png)
-![image](doc_picture/界面.png)
-![image](doc_picture/工程记录.png)
+界面设计：       
+
+![image](doc_picture/界面.png)      
+竖屏水印：       
+
+![image](doc_picture/竖屏水印.png)      
+横屏水印：       
+
+![image](doc_picture/横屏水印.png)      
+
+水印样式选择：       
+
+![image](doc_picture/水印样式选择.png)      
+物业：       
+
+![image](doc_picture/物业.png)      
+界面：       
+
+![image](doc_picture/界面.png)   
+
+工程记录；      
+
+![image](doc_picture/工程记录.png)       
+
